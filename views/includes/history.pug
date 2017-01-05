@@ -1,0 +1,13 @@
+- var history = [{name: 'Bulbasaur',id: '001'},{name: 'Charmander',id: '007'}];
+#history
+  .ui.four.column.stackable.grid.container
+    each item in history
+      .column
+        a(href=`/${item.id}`)
+          .ui.card
+            .image
+              img(src=`http://assets.pokemon.com/assets/cms2/img/pokedex/detail/${item.id}.png`)
+            .content
+              .header #{item.id} - #{item.name}
+              .description
+                | type data goes here

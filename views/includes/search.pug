@@ -1,0 +1,18 @@
+#search
+  .ui.fluid.search.selection.dropdown
+    input(type='hidden', name='pokemon')
+    i.dropdown.icon
+    .default.text Select a Pokemon!
+    .menu
+      .item(data-value='1') Bulbasaur
+      .item(data-value='2') Ivysaur
+      .item(data-value='3') Venosaur
+      .item(data-value='4') Squirtle
+      .item(data-value='5') Wartortle
+      .item(data-value='6') Blastoise
+      .item(data-value='7') Charmander
+      .item(data-value='8') Charmeleon
+      .item(data-value='9') Charizard
+
+  script.
+    $('.ui.dropdown').dropdown();
