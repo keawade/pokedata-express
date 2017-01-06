@@ -9,8 +9,16 @@
             img(src=`http://assets.pokemon.com/assets/cms2/img/pokedex/full/${selected.id}.png`)
           .column
             .ui.dividing.header Type
+            each pokeType in selected.types
+              div(class=`type ${pokeType.toLowerCase()}`) #{pokeType.toUpperCase()}
             .ui.dividing.header Weaknesses
+            each weakness in selected.weaknesses
+              div(class=`type ${weakness.toLowerCase()}`) #{weakness.toUpperCase()}
             .ui.dividing.header Resistances
+            each resistance in selected.resistances
+              div(class=`type ${resistance.toLowerCase()}`) #{resistance.toUpperCase()}
             .ui.dividing.header Immunities
+            each immunity in selected.immunities
+              div(class=`type ${immunity.toLowerCase()}`) #{immunity.toUpperCase()}
     .ui.center.aligned.segment Fork me on 
       a(href='https://github.com/keawade/pokedata-express', target='_blank') GitHub
