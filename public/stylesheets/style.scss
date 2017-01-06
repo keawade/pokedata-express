@@ -137,58 +137,58 @@ $fairy: #EE99AC;
 .circle.icon {
   border: none;
   background-color: transparent;
-  .normal {
+  &.normal {
     color: $normal;
   }
-  .fire {
+  &.fire {
     color: $fire;
   }
-  .water {
+  &.water {
     color: $water;
   }
-  .electric {
+  &.electric {
     color: $electric;
   }
-  .grass {
+  &.grass {
     color: $grass;
   }
-  .ice {
+  &.ice {
     color: $ice;
   }
-  .ground {
+  &.ground {
     color: $ground;
   }
-  .flying {
+  &.flying {
     color: $flying;
   }
-  .ghost {
+  &.ghost {
     color: $ghost;
   }
-  .rock {
+  &.rock {
     color: $rock;
   }
-  .fighting {
+  &.fighting {
     color: $fighting;
   }
-  .poison {
+  &.poison {
     color: $poison;
   }
-  .psychic {
+  &.psychic {
     color: $psychic;
   }
-  .bug {
+  &.bug {
     color: $bug;
   }
-  .dark {
+  &.dark {
     color: $dark;
   }
-  .steel {
+  &.steel {
     color: $steel;
   }
-  .dragon {
+  &.dragon {
     color: $dragon;
   }
-  .fairy {
+  &.fairy {
     color: $fairy;
   }
 }

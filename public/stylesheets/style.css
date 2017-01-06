@@ -96,41 +96,41 @@
 .circle.icon {
   border: none;
   background-color: transparent; }
-  .circle.icon .normal {
+  .circle.icon.normal {
     color: #A8A878; }
-  .circle.icon .fire {
+  .circle.icon.fire {
     color: #F08030; }
-  .circle.icon .water {
+  .circle.icon.water {
     color: #6890F0; }
-  .circle.icon .electric {
+  .circle.icon.electric {
     color: #F8D030; }
-  .circle.icon .grass {
+  .circle.icon.grass {
     color: #78C850; }
-  .circle.icon .ice {
+  .circle.icon.ice {
     color: #98D8D8; }
-  .circle.icon .ground {
+  .circle.icon.ground {
     color: #E0C068; }
-  .circle.icon .flying {
+  .circle.icon.flying {
     color: #A890F0; }
-  .circle.icon .ghost {
+  .circle.icon.ghost {
     color: #705898; }
-  .circle.icon .rock {
+  .circle.icon.rock {
     color: #B8A038; }
-  .circle.icon .fighting {
+  .circle.icon.fighting {
     color: #C03028; }
-  .circle.icon .poison {
+  .circle.icon.poison {
     color: #A040A0; }
-  .circle.icon .psychic {
+  .circle.icon.psychic {
     color: #F85888; }
-  .circle.icon .bug {
+  .circle.icon.bug {
     color: #A8B820; }
-  .circle.icon .dark {
+  .circle.icon.dark {
     color: #705848; }
-  .circle.icon .steel {
+  .circle.icon.steel {
     color: #B8B8D0; }
-  .circle.icon .dragon {
+  .circle.icon.dragon {
     color: #7038F8; }
-  .circle.icon .fairy {
+  .circle.icon.fairy {
     color: #EE99AC; }
 
 /*# sourceMappingURL=style.css.map */

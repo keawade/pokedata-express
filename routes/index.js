@@ -4,18 +4,20 @@ var router = express.Router();
 var {pokemon} = require('../data/pokemon.json');
 
 /* GET home page. */
-router.get('/', function (req, res, next) {
-  const random = Math.floor(Math.random() * (152));
-  let selected = pokemon.find((poke) => (Number(poke.id) === random));
+router.get(['/', '/:id'], function (req, res, next) {
+  const sess = req.session;
+  const id = req.params.id || Math.floor(Math.random() * (152));
+  let selected = pokemon.find((poke) => (Number(poke.id) === Number(id)));
   selected = calculateStrengths(selected);
-  res.render('pokemon', { selected, pokemon, title: `${selected.name} | PokeData` });
-});
 
-router.get('/:id', function (req, res, next) {
-  let selected = pokemon.find((poke) => (Number(poke.id) === Number(req.params.id)));
-  selected = calculateStrengths(selected);
-  res.render('pokemon', { selected, pokemon, title: `${selected.name} | PokeData` });
-})
+  if (sess.history) {
+    sess.history = [selected, ...sess.history];
+  } else {
+    sess.history = [selected];
+  }
+
+  res.render('pokemon', { selected, pokemon, title: `${selected.name} | PokeData`, history: sess.history.slice(1) });
+});
 
 module.exports = router;
 
