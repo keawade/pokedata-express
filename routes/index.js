@@ -11,6 +11,11 @@ router.get(['/', '/:id'], function (req, res, next) {
   selected = calculateStrengths(selected);
 
   if (sess.history) {
+    const pos = sess.history.findIndex((el) => (Number(el.id) == Number(selected.id)));
+    console.log('history pos', pos)
+    if (pos !== -1) {
+      sess.history.splice(pos, 1);
+    }
     sess.history = [selected, ...sess.history];
   } else {
     sess.history = [selected];
