@@ -8,13 +8,13 @@ router.get('/', function (req, res, next) {
   const random = Math.floor(Math.random() * (152));
   let selected = pokemon.find((poke) => (Number(poke.id) === random));
   selected = calculateStrengths(selected);
-  res.render('pokemon', { selected, pokemon });
+  res.render('pokemon', { selected, pokemon, title: `${selected.name} | PokeData` });
 });
 
 router.get('/:id', function (req, res, next) {
   let selected = pokemon.find((poke) => (Number(poke.id) === Number(req.params.id)));
   selected = calculateStrengths(selected);
-  res.render('pokemon', { selected, pokemon });
+  res.render('pokemon', { selected, pokemon, title: `${selected.name} | PokeData` });
 })
 
 module.exports = router;
