@@ -6,34 +6,29 @@ var {pokemon} = require('../data/pokemon.json');
 /* GET home page. */
 router.get('/', function (req, res, next) {
   const random = Math.floor(Math.random() * (152));
-  const selected = pokemon.find((poke) => (Number(poke.id) === random));
-  const strengths = calculateStrengths(selected.types)
-  selected.weaknesses = Object.keys(strengths).filter((key) => (strengths[key] >= 2));
-  selected.resistances = Object.keys(strengths).filter((key) => (strengths[key] == 0.5 || strengths[key] == 0.25));
-  selected.immunities = Object.keys(strengths).filter((key) => (strengths[key] == 0));
-  console.log(selected)
+  let selected = pokemon.find((poke) => (Number(poke.id) === random));
+  selected = calculateStrengths(selected);
   res.render('pokemon', { selected, pokemon });
 });
 
 router.get('/:id', function (req, res, next) {
-  const selected = pokemon.find((poke) => (Number(poke.id) === Number(req.params.id)));
-  const strengths = calculateStrengths(selected.types)
-  selected.weaknesses = Object.keys(strengths).filter((key) => (strengths[key] >= 2));
-  selected.resistances = Object.keys(strengths).filter((key) => (strengths[key] == 0.5 || strengths[key] == 0.25));
-  selected.immunities = Object.keys(strengths).filter((key) => (strengths[key] == 0));
-  console.log(selected)
+  let selected = pokemon.find((poke) => (Number(poke.id) === Number(req.params.id)));
+  selected = calculateStrengths(selected);
   res.render('pokemon', { selected, pokemon });
 })
 
 module.exports = router;
 
-const { types } = require('../data/types.json');
-
-const typesKeys = Object.keys(types)
-
-const calculateStrengths = (givenTypes) => {
-  return typesKeys.reduce((strengths, type) => {
-    strengths[type] = givenTypes.reduce((total, givenType) => total * types[type][givenType.toLowerCase()], 1)
+const calculateStrengths = (mon) => {
+  const { types } = require('../data/types.json');
+  const typesKeys = Object.keys(types)
+  const strengths = typesKeys.reduce((strengths, type) => {
+    strengths[type] = mon.types.reduce((total, givenType) => total * types[type][givenType.toLowerCase()], 1)
     return strengths
   }, {})
+
+  mon.weaknesses = Object.keys(strengths).filter((key) => (strengths[key] >= 2));
+  mon.resistances = Object.keys(strengths).filter((key) => (strengths[key] == 0.5 || strengths[key] == 0.25));
+  mon.immunities = Object.keys(strengths).filter((key) => (strengths[key] == 0));
+  return mon;
 }
