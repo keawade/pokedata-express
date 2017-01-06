@@ -1,3 +1,29 @@
+$normal: #A8A878;
+$fire: #F08030;
+$water: #6890F0;
+$electric: #F8D030;
+$grass: #78C850;
+$ice: #98D8D8;
+$ground: #E0C068;
+$flying: #A890F0;
+$ghost: #705898;
+$rock: #B8A038;
+$fighting: #C03028;
+$poison: #A040A0;
+$psychic: #F85888;
+$bug: #A8B820;
+$dark: #705848;
+$steel: #B8B8D0;
+$dragon: #7038F8;
+$fairy: #EE99AC;
+
+#search, #viewer {
+    padding-left: 14px;
+    padding-right: 14px;
+    margin-top: 14px;
+    margin-bottom: 14px;
+}
+
 @font-face {
 	font-family: pokemon;
 	src: url(/fonts/joystix-monospace.ttf);
@@ -16,93 +42,153 @@
   color: #FFF;
   text-shadow: 0.5px 0.5px 2px black;
 
-  &.normal {
-    background-color: #A8A878;
-    border: 1px solid #6D6D4E;
-  }
+}
 
-  &.fire {
-    background-color: #F08030;
-    border: 1px solid #9C531F;
-  }
+.normal {
+  background-color: $normal;
+  border: 1px solid #6D6D4E;
+}
 
-  &.water {
-    background-color: #6890F0;
-    border: 1px solid #445E9C;
-  }
+.fire {
+  background-color: $fire;
+  border: 1px solid #9C531F;
+}
 
-  &.electric {
-    background-color: #F8D030;
-    border: 1px solid #A1871F;
-  }
+.water {
+  background-color: $water;
+  border: 1px solid #445E9C;
+}
 
-  &.grass {
-    background-color: #78C850;
-    border: 1px solid #4E8234;
-  }
+.electric {
+  background-color: $electric;
+  border: 1px solid #A1871F;
+}
 
-  &.ice {
-    background-color: #98D8D8;
-    border: 1px solid #638D8D;
-  }
+.grass {
+  background-color: $grass;
+  border: 1px solid #4E8234;
+}
 
-  &.ground {
-    background-color: #E0C068;
-    border: 1px solid #927D44;
-  }
+.ice {
+  background-color: $ice;
+  border: 1px solid #638D8D;
+}
 
-  &.flying {
-    background-color: #A890F0;
-    border: 1px solid #6D5E9C;
-  }
+.ground {
+  background-color: $ground;
+  border: 1px solid #927D44;
+}
 
-  &.ghost {
-    background-color: #705898;
-    border: 1px solid #493963;
-  }
+.flying {
+  background-color: $flying;
+  border: 1px solid #6D5E9C;
+}
 
-  &.rock {
-    background-color: #B8A038;
-    border: 1px solid #786824;
-  }
+.ghost {
+  background-color: $ghost;
+  border: 1px solid #493963;
+}
 
-  &.fighting {
-    background-color: #C03028;
-    border: 1px solid #7D1F1A;
-  }
+.rock {
+  background-color: $rock;
+  border: 1px solid #786824;
+}
 
-  &.poison {
-    background-color: #A040A0;
-    border: 1px solid #682A68;
-  }
+.fighting {
+  background-color: $fighting;
+  border: 1px solid #7D1F1A;
+}
 
-  &.psychic {
-    background-color: #F85888;
-    border: 1px solid #A13959;
-  }
+.poison {
+  background-color: $poison;
+  border: 1px solid #682A68;
+}
 
-  &.bug {
-    background-color: #A8B820;
-    border: 1px solid #6D7815;
-  }
+.psychic {
+  background-color: $psychic;
+  border: 1px solid #A13959;
+}
 
-  &.dark {
-    background-color: #705848;
-    border: 1px solid #49392F;
-  }
+.bug {
+  background-color: $bug;
+  border: 1px solid #6D7815;
+}
 
-  &.steel {
-    background-color: #B8B8D0;
-    border: 1px solid #787887;
-  }
+.dark {
+  background-color: $dark;
+  border: 1px solid #49392F;
+}
 
-  &.dragon {
-    background-color: #7038F8;
-    border: 1px solid #4924A1;
-  }
+.steel {
+  background-color: $steel;
+  border: 1px solid #787887;
+}
 
-  &.fairy {
-    background-color: #EE99AC;
-    border: 1px solid #F4BDC9;
+.dragon {
+  background-color: $dragon;
+  border: 1px solid #4924A1;
+}
+
+.fairy {
+  background-color: $fairy;
+  border: 1px solid #F4BDC9;
+}
+
+.circle.icon {
+  border: none;
+  background-color: transparent;
+  .normal {
+    color: $normal;
+  }
+  .fire {
+    color: $fire;
+  }
+  .water {
+    color: $water;
+  }
+  .electric {
+    color: $electric;
+  }
+  .grass {
+    color: $grass;
+  }
+  .ice {
+    color: $ice;
+  }
+  .ground {
+    color: $ground;
+  }
+  .flying {
+    color: $flying;
+  }
+  .ghost {
+    color: $ghost;
+  }
+  .rock {
+    color: $rock;
+  }
+  .fighting {
+    color: $fighting;
+  }
+  .poison {
+    color: $poison;
+  }
+  .psychic {
+    color: $psychic;
+  }
+  .bug {
+    color: $bug;
+  }
+  .dark {
+    color: $dark;
+  }
+  .steel {
+    color: $steel;
+  }
+  .dragon {
+    color: $dragon;
+  }
+  .fairy {
+    color: $fairy;
   }
 }
